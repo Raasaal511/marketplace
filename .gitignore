@@ -1,0 +1,6 @@
+.env
+.dockerignore
+migrations
+venv
+.idea
+__pycache__
