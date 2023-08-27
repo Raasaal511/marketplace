@@ -1,8 +1,8 @@
 from fastapi_users import FastAPIUsers
 from fastapi_users.authentication import CookieTransport, JWTStrategy, AuthenticationBackend
 
-from auth.manager import get_user_manager
-from models.user import User
+from marketplace_app.auth.manager import get_user_manager
+from marketplace_app.models.user import User
 
 
 cookie_transport = CookieTransport(cookie_name='marketplace', cookie_max_age=3600)

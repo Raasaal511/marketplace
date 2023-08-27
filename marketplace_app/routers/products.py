@@ -3,11 +3,11 @@ from fastapi.routing import APIRouter
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from auth.users import current_user
-from database import get_db
-from models.product import Product
-from models.user import User
-from schemas import ProductScheme, ProductCreate, ProductUpdate
+from marketplace_app.auth.users import current_user
+from marketplace_app.database import get_db
+from marketplace_app.models.product import Product
+from marketplace_app.models.user import User
+from marketplace_app.schemas import ProductScheme, ProductCreate, ProductUpdate
 
 
 router = APIRouter(
@@ -73,7 +73,6 @@ async def update_product(product_id: int,
                          ):
     async with session.begin():
         product = await session.get(Product, product_id)
-
         if not product:
             raise HTTPException(status_code=404, detail='Product not found')
 

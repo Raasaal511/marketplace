@@ -1,12 +1,12 @@
 from fastapi import FastAPI, Depends
 
 
-from auth.schemas import UserCreate
-from auth.schemas import UserRead
-from auth.users import auth_backend, fastapi_users, current_user
+from marketplace_app.auth.schemas import UserCreate
+from marketplace_app.auth.schemas import UserRead
+from marketplace_app.auth.users import auth_backend, fastapi_users, current_user
 
-from models.user import User
-from routers import products
+from marketplace_app.models.user import User
+from marketplace_app.routers import products
 
 
 app = FastAPI()

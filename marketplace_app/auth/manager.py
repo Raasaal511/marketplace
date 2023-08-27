@@ -5,7 +5,7 @@ from fastapi import Request, Depends
 from fastapi_users import BaseUserManager, IntegerIDMixin
 
 
-from models.user import User, get_user_db
+from marketplace_app.models.user import User, get_user_db
 
 
 SECRET = "SECRET"
